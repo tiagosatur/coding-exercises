@@ -83,27 +83,34 @@ starter/
 
 The analysis logic lives in `analyze.js`, separate from the server so it can be tested without a running HTTP server. Implement each function in that file until all tests pass, then wire everything together in `server.js`.
 
+## Getting started
+
+Copy the starter into a new submission folder and install dependencies:
+
+```bash
+cp -r starter/ submissions/01
+cd submissions/01
+pnpm install
+```
+
 ## Running tests
 
 ```bash
-cd starter
-npm install
-npm test
+pnpm test
 ```
 
-Tests run in watch mode. Use `npm run test:run` for a single pass.
+Tests run in watch mode. Use `pnpm test:run` for a single pass.
 
-## Getting started
+## Starting the server
 
 Once tests pass, start the server:
 
 ```bash
-node server.js
+pnpm dev
 ```
 
-Test with curl:
+Test with curl (from inside your submission folder):
 
 ```bash
-curl -X POST http://localhost:3000/analyze-inventory \
-  -F "inventory=@inventory.csv"
+curl -X POST http://localhost:9000/api/analyze-inventory -F "inventory=@inventory.csv"
 ```
