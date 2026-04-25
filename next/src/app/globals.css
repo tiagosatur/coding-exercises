@@ -1,0 +1,84 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-outfit: var(--font-outfit);
+
+  /* Bauhaus palette */
+  --color-bauhaus-red: #D02020;
+  --color-bauhaus-blue: #1040C0;
+  --color-bauhaus-yellow: #F0C020;
+  --color-bauhaus-black: #121212;
+  --color-bauhaus-canvas: #F0F0F0;
+  --color-bauhaus-muted: #E0E0E0;
+}
+
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+@keyframes glitch {
+  0%, 100% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(2px, -2px); }
+  60% { transform: translate(-1px, -1px); }
+  80% { transform: translate(1px, 1px); }
+}
+
+/* ─── Prose + shiki overrides ────────────────────────────────────────────── */
+
+/* Remove backtick quotes the typography plugin adds around all <code> */
+.prose code::before, .prose code::after { content: none; }
+
+/* Inline code: restore gray pill (only for code NOT inside a pre) */
+.prose :not(pre) > code {
+  background: #f3f4f6;
+  color: #1f2937;
+  border-radius: 0.25rem;
+  padding: 0.15rem 0.4rem;
+  font-size: 0.875em;
+  font-weight: 500;
+}
+
+/* rehype-pretty-code wraps blocks in <figure> — normalise its margin */
+.prose figure[data-rehype-pretty-code-figure] { margin: 0 0 1.25rem; }
+
+/* Block code pre: let shiki's inline style own background-color, add padding + radius */
+.prose pre {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+}
+
+/* Block code inner: reset typography defaults so shiki token colours show */
+.prose pre code {
+  background: transparent;
+  color: inherit;
+  font-size: 0.875rem;
+  padding: 0;
+  border-radius: 0;
+  font-weight: inherit;
+}
+
+/* Tighten heading margins to match V1 rhythm */
+.prose h1 { margin-top: 0; margin-bottom: 0.75rem; }
+.prose h2 { margin-top: 1.75rem; margin-bottom: 0.5rem; }
+.prose h3 { margin-top: 1.25rem; margin-bottom: 0.375rem; }
+.prose p  { margin-bottom: 0.875rem; }
