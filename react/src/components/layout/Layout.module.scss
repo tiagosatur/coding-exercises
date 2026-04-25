@@ -1,0 +1,22 @@
+@use "@styles/tokens" as *;
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.main {
+  margin: 0 auto;
+  max-width: 1600px;
+  padding: 0 4rem;
+}
+
+.page {
+  animation: fadeUp 700ms $easing-luxury both;
+}

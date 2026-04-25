@@ -1,0 +1,7 @@
+.grid {
+  display: grid;
+  gap: 3rem 1.5rem; // extra vertical gap to account for floating avatar
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+}

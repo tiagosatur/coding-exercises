@@ -1,0 +1,78 @@
+@use "sass:list";
+
+// Exercise-specific design tokens (neo-brutalist card style)
+$ex-accents: #8B5CF6, #F472B6, #FBBF24, #34D399;
+$ex-card-bg: #ffffff;
+$ex-card-border: #1e293b;
+$ex-card-shadow: 8px 8px 0px 0px #e2e8f0;
+$ex-card-shadow-hover: 8px 8px 0px 0px #F472B6;
+$ex-avatar-bg: #f1f5f9;
+$ex-easing: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+.card {
+  background-color: $ex-card-bg;
+  border: 2px solid $ex-card-border;
+  border-radius: 24px;
+  box-shadow: $ex-card-shadow;
+  cursor: pointer;
+  padding: 3rem 1.5rem 1.5rem;
+  position: relative;
+  text-align: center;
+  transition: transform 300ms $ex-easing, box-shadow 300ms $ex-easing;
+
+  &:hover {
+    box-shadow: $ex-card-shadow-hover;
+    transform: rotate(-1deg) scale(1.02);
+  }
+}
+
+.avatar {
+  background-color: $ex-avatar-bg;
+  border: 2px solid $ex-card-border;
+  border-radius: 9999px;
+  height: 56px;
+  left: 50%;
+  overflow: hidden;
+  position: absolute;
+  top: -28px;
+  transform: translateX(-50%);
+  width: 56px;
+
+  img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+// Rotational accent ring color per card index
+@for $i from 1 through 4 {
+  .accent-#{$i} {
+    box-shadow: 0 0 0 3px list.nth($ex-accents, $i);
+  }
+}
+
+.name {
+  color: #1e293b;
+  font-family: "Outfit", system-ui, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.meta {
+  color: #64748b;
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.about {
+  color: #1e293b;
+  font-size: 0.65rem;
+  font-weight: 500;
+  overflow-wrap: break-word;
+}
