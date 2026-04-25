@@ -1,0 +1,182 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: #f4f4f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1rem 3rem;
+  color: #1a1a1a;
+}
+
+nav {
+  width: 100%;
+  max-width: 420px;
+  padding: 1rem 0;
+}
+
+nav a {
+  color: #3b82f6;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 420px;
+}
+
+h1 {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+input {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #d4d4d8;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: border-color 0.2s;
+}
+
+input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+/* Add these classes via JS */
+input.invalid {
+  border-color: #ef4444;
+}
+
+input.valid {
+  border-color: #22c55e;
+}
+
+.error-msg {
+  display: block;
+  /* min-height: 1.25rem; */
+  margin-top: 0.25rem;
+  font-size: 0.8rem;
+  color: #ef4444;
+}
+
+button {
+  padding: 0.7rem;
+  background: #3b82f6;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #2563eb;
+}
+
+.submit-btn {
+  width: 100%;
+}
+
+/* User list */
+#user-list-section {
+  margin-top: 2rem;
+  border-top: 1px solid #e4e4e7;
+  padding-top: 1.5rem;
+}
+
+#user-list-section h2 {
+  font-size: 1.15rem;
+  margin-bottom: 0.75rem;
+}
+
+#user-list {
+  list-style: none;
+}
+
+#user-list li {
+  align-items: center;
+  display: flex;
+  background: #f9fafb;
+  border: 1px solid #e4e4e7;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  justify-content: space-between;
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+#user-list li .label {
+  flex-grow: 1;
+}
+
+#user-list li .delete-btn {
+  padding: 0.25rem 0.5rem;
+  background: transparent;
+  visibility: hidden;
+}
+
+#user-list li .delete-btn:hover {
+  color: #ef4444;
+}
+
+#user-list li:hover .delete-btn, #user-list li:hover .edit-btn {
+  background: transparent;
+  visibility: visible;
+  color: #3b82f6;
+
+}
+
+.hidden {
+  display: none;
+}
+
+.general-errors {
+  background: #FFDEAD;
+  padding: 12px 10px;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+
+.edit-btn {
+  background: transparent;
+  visibility: hidden;
+}
+
+.edit-input {
+  flex-grow: 1;
+  margin-right: 12px;
+}
+
+.save-btn {
+  height: 35px;
+}
