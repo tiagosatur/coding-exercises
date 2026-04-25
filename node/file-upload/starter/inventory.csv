@@ -1,0 +1,32 @@
+timestamp,product_id,product_name,type,quantity
+1705708800,A1,Wireless Earbuds,out,80
+1704844800,C3,Coffee Mug,in,50
+1705276800,A2,USB-C Cable,in,30
+1704844800,D2,Mouse Pad,in,100
+1705536000,D3,Water Bottle,out,10
+1704844800,A1,Wireless Earbuds,in,100
+1705190400,B2,Mechanical Keyboard,out,15
+not_a_timestamp,X9,Bad Data,out,abc
+1705017600,C1,Notebook,out,100
+1704844800,B1,Laptop Stand,in,30
+1705363200,C2,Desk Lamp,out,7
+1704844800,A2,USB-C Cable,in,50
+1705449600,C3,Coffee Mug,out,60
+1705881600,A1,Wireless Earbuds,out,30
+1705622400,C1,Notebook,out,100
+1704844800,C2,Desk Lamp,in,15
+1705017600,A2,USB-C Cable,out,60
+1705795200,D2,Mouse Pad,out,35
+1704844800,D3,Water Bottle,in,75
+1705190400,B1,Laptop Stand,out,5
+1704931200,B2,Mechanical Keyboard,in,10
+1704844800,C1,Notebook,in,500
+1705449600,B2,Mechanical Keyboard,in,20
+1705363200,C1,Notebook,out,150
+1705536000,A2,USB-C Cable,out,40
+1704844800,D1,Monitor,in,10
+1705017600,D3,Water Bottle,out,20
+1705881600,B1,Laptop Stand,out,8
+1705276800,A1,Wireless Earbuds,in,50
+,,,,
+1704950000,B3,Incomplete Row,in,
