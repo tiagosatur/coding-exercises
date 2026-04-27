@@ -40,6 +40,13 @@
 .nav {
   align-items: center;
   display: flex;
+  gap: 1.75rem;
+}
+
+.navSeparator {
+  background-color: rgba(26, 26, 26, 0.15);
+  height: 14px;
+  width: 1px;
 }
 
 .navLink {
@@ -55,4 +62,8 @@
   &:hover {
     color: $color-foreground;
   }
+}
+
+.navLinkActive {
+  color: $color-foreground;
 }
