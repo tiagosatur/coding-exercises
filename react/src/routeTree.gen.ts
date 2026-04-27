@@ -11,7 +11,13 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as PeopleSearchStarterIndexRouteImport } from './routes/people-search/starter/index'
+import { Route as CitiesByStateStarterIndexRouteImport } from './routes/cities-by-state/starter/index'
+import { Route as CitiesByStateCourseIndexRouteImport } from './routes/cities-by-state/course/index'
 import { Route as PeopleSearchSubmissions01IndexRouteImport } from './routes/people-search/submissions/01/index'
+import { Route as CitiesByStateSubmissions02IndexRouteImport } from './routes/cities-by-state/submissions/02/index'
+import { Route as CitiesByStateSubmissions01IndexRouteImport } from './routes/cities-by-state/submissions/01/index'
+import { Route as CitiesByStateSolutions02IndexRouteImport } from './routes/cities-by-state/solutions/02/index'
+import { Route as CitiesByStateSolutions01IndexRouteImport } from './routes/cities-by-state/solutions/01/index'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -24,44 +30,128 @@ const PeopleSearchStarterIndexRoute =
     path: '/people-search/starter/',
     getParentRoute: () => rootRouteImport,
   } as any)
+const CitiesByStateStarterIndexRoute =
+  CitiesByStateStarterIndexRouteImport.update({
+    id: '/cities-by-state/starter/',
+    path: '/cities-by-state/starter/',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const CitiesByStateCourseIndexRoute =
+  CitiesByStateCourseIndexRouteImport.update({
+    id: '/cities-by-state/course/',
+    path: '/cities-by-state/course/',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const PeopleSearchSubmissions01IndexRoute =
   PeopleSearchSubmissions01IndexRouteImport.update({
     id: '/people-search/submissions/01/',
     path: '/people-search/submissions/01/',
     getParentRoute: () => rootRouteImport,
   } as any)
+const CitiesByStateSubmissions02IndexRoute =
+  CitiesByStateSubmissions02IndexRouteImport.update({
+    id: '/cities-by-state/submissions/02/',
+    path: '/cities-by-state/submissions/02/',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const CitiesByStateSubmissions01IndexRoute =
+  CitiesByStateSubmissions01IndexRouteImport.update({
+    id: '/cities-by-state/submissions/01/',
+    path: '/cities-by-state/submissions/01/',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const CitiesByStateSolutions02IndexRoute =
+  CitiesByStateSolutions02IndexRouteImport.update({
+    id: '/cities-by-state/solutions/02/',
+    path: '/cities-by-state/solutions/02/',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const CitiesByStateSolutions01IndexRoute =
+  CitiesByStateSolutions01IndexRouteImport.update({
+    id: '/cities-by-state/solutions/01/',
+    path: '/cities-by-state/solutions/01/',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/cities-by-state/course/': typeof CitiesByStateCourseIndexRoute
+  '/cities-by-state/starter/': typeof CitiesByStateStarterIndexRoute
   '/people-search/starter/': typeof PeopleSearchStarterIndexRoute
+  '/cities-by-state/solutions/01/': typeof CitiesByStateSolutions01IndexRoute
+  '/cities-by-state/solutions/02/': typeof CitiesByStateSolutions02IndexRoute
+  '/cities-by-state/submissions/01/': typeof CitiesByStateSubmissions01IndexRoute
+  '/cities-by-state/submissions/02/': typeof CitiesByStateSubmissions02IndexRoute
   '/people-search/submissions/01/': typeof PeopleSearchSubmissions01IndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/cities-by-state/course': typeof CitiesByStateCourseIndexRoute
+  '/cities-by-state/starter': typeof CitiesByStateStarterIndexRoute
   '/people-search/starter': typeof PeopleSearchStarterIndexRoute
+  '/cities-by-state/solutions/01': typeof CitiesByStateSolutions01IndexRoute
+  '/cities-by-state/solutions/02': typeof CitiesByStateSolutions02IndexRoute
+  '/cities-by-state/submissions/01': typeof CitiesByStateSubmissions01IndexRoute
+  '/cities-by-state/submissions/02': typeof CitiesByStateSubmissions02IndexRoute
   '/people-search/submissions/01': typeof PeopleSearchSubmissions01IndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/cities-by-state/course/': typeof CitiesByStateCourseIndexRoute
+  '/cities-by-state/starter/': typeof CitiesByStateStarterIndexRoute
   '/people-search/starter/': typeof PeopleSearchStarterIndexRoute
+  '/cities-by-state/solutions/01/': typeof CitiesByStateSolutions01IndexRoute
+  '/cities-by-state/solutions/02/': typeof CitiesByStateSolutions02IndexRoute
+  '/cities-by-state/submissions/01/': typeof CitiesByStateSubmissions01IndexRoute
+  '/cities-by-state/submissions/02/': typeof CitiesByStateSubmissions02IndexRoute
   '/people-search/submissions/01/': typeof PeopleSearchSubmissions01IndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/people-search/starter/' | '/people-search/submissions/01/'
+  fullPaths:
+    | '/'
+    | '/cities-by-state/course/'
+    | '/cities-by-state/starter/'
+    | '/people-search/starter/'
+    | '/cities-by-state/solutions/01/'
+    | '/cities-by-state/solutions/02/'
+    | '/cities-by-state/submissions/01/'
+    | '/cities-by-state/submissions/02/'
+    | '/people-search/submissions/01/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/people-search/starter' | '/people-search/submissions/01'
+  to:
+    | '/'
+    | '/cities-by-state/course'
+    | '/cities-by-state/starter'
+    | '/people-search/starter'
+    | '/cities-by-state/solutions/01'
+    | '/cities-by-state/solutions/02'
+    | '/cities-by-state/submissions/01'
+    | '/cities-by-state/submissions/02'
+    | '/people-search/submissions/01'
   id:
     | '__root__'
     | '/'
+    | '/cities-by-state/course/'
+    | '/cities-by-state/starter/'
     | '/people-search/starter/'
+    | '/cities-by-state/solutions/01/'
+    | '/cities-by-state/solutions/02/'
+    | '/cities-by-state/submissions/01/'
+    | '/cities-by-state/submissions/02/'
     | '/people-search/submissions/01/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CitiesByStateCourseIndexRoute: typeof CitiesByStateCourseIndexRoute
+  CitiesByStateStarterIndexRoute: typeof CitiesByStateStarterIndexRoute
   PeopleSearchStarterIndexRoute: typeof PeopleSearchStarterIndexRoute
+  CitiesByStateSolutions01IndexRoute: typeof CitiesByStateSolutions01IndexRoute
+  CitiesByStateSolutions02IndexRoute: typeof CitiesByStateSolutions02IndexRoute
+  CitiesByStateSubmissions01IndexRoute: typeof CitiesByStateSubmissions01IndexRoute
+  CitiesByStateSubmissions02IndexRoute: typeof CitiesByStateSubmissions02IndexRoute
   PeopleSearchSubmissions01IndexRoute: typeof PeopleSearchSubmissions01IndexRoute
 }
 
@@ -81,6 +171,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PeopleSearchStarterIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/cities-by-state/starter/': {
+      id: '/cities-by-state/starter/'
+      path: '/cities-by-state/starter'
+      fullPath: '/cities-by-state/starter/'
+      preLoaderRoute: typeof CitiesByStateStarterIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cities-by-state/course/': {
+      id: '/cities-by-state/course/'
+      path: '/cities-by-state/course'
+      fullPath: '/cities-by-state/course/'
+      preLoaderRoute: typeof CitiesByStateCourseIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/people-search/submissions/01/': {
       id: '/people-search/submissions/01/'
       path: '/people-search/submissions/01'
@@ -88,12 +192,46 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PeopleSearchSubmissions01IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/cities-by-state/submissions/02/': {
+      id: '/cities-by-state/submissions/02/'
+      path: '/cities-by-state/submissions/02'
+      fullPath: '/cities-by-state/submissions/02/'
+      preLoaderRoute: typeof CitiesByStateSubmissions02IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cities-by-state/submissions/01/': {
+      id: '/cities-by-state/submissions/01/'
+      path: '/cities-by-state/submissions/01'
+      fullPath: '/cities-by-state/submissions/01/'
+      preLoaderRoute: typeof CitiesByStateSubmissions01IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cities-by-state/solutions/02/': {
+      id: '/cities-by-state/solutions/02/'
+      path: '/cities-by-state/solutions/02'
+      fullPath: '/cities-by-state/solutions/02/'
+      preLoaderRoute: typeof CitiesByStateSolutions02IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cities-by-state/solutions/01/': {
+      id: '/cities-by-state/solutions/01/'
+      path: '/cities-by-state/solutions/01'
+      fullPath: '/cities-by-state/solutions/01/'
+      preLoaderRoute: typeof CitiesByStateSolutions01IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CitiesByStateCourseIndexRoute: CitiesByStateCourseIndexRoute,
+  CitiesByStateStarterIndexRoute: CitiesByStateStarterIndexRoute,
   PeopleSearchStarterIndexRoute: PeopleSearchStarterIndexRoute,
+  CitiesByStateSolutions01IndexRoute: CitiesByStateSolutions01IndexRoute,
+  CitiesByStateSolutions02IndexRoute: CitiesByStateSolutions02IndexRoute,
+  CitiesByStateSubmissions01IndexRoute: CitiesByStateSubmissions01IndexRoute,
+  CitiesByStateSubmissions02IndexRoute: CitiesByStateSubmissions02IndexRoute,
   PeopleSearchSubmissions01IndexRoute: PeopleSearchSubmissions01IndexRoute,
 }
 export const routeTree = rootRouteImport

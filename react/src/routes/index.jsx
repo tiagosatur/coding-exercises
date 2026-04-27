@@ -1,19 +1,9 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
+import { exercises } from "@exercises/config";
 
 export const Route = createFileRoute("/")({
   component: ExercisesPage,
 });
-
-const exercises = [
-  {
-    slug: "people-search",
-    title: "People Search",
-    description: "Search anime characters using the Jikan API with debounced input and React Query.",
-    submissions: [
-      { label: "01", to: "/people-search/submissions/01" },
-    ],
-  },
-];
 
 function ExercisesPage() {
   return (
@@ -51,11 +41,11 @@ function ExercisesPage() {
               {ex.description}
             </p>
             <div className="flex gap-3 flex-wrap">
-              {ex.submissions.map((s) => (
+              {ex.links.map((s) => (
                 <Link key={s.label} to={s.to} className="group/btn relative inline-flex h-10 overflow-hidden bg-[#1A1A1A] cursor-pointer">
                   <span className="absolute inset-0 bg-[#D4AF37] -translate-x-full group-hover/btn:translate-x-0 transition-transform duration-500 ease-out" />
                   <span className="relative z-10 flex items-center px-8 text-[10px] uppercase tracking-[0.2em] font-medium text-white">
-                    Submission {s.label}
+                    {s.label}
                   </span>
                 </Link>
               ))}
