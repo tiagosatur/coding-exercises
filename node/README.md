@@ -5,6 +5,7 @@ A collection of Node.js exercises focused on backend development, APIs, and data
 ## Exercises
 
 - [file-upload](./file-upload) — CSV inventory upload and analysis API using Express and Multer.
+- [test-framework](./test-framework) — build a Jest-like test runner from scratch (`it`, `exec`, `isEqual`), sync then async.
 
 ## Exercise structure
 
